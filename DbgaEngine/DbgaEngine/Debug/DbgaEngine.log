@@ -1,0 +1,3 @@
+﻿  DbgaEngine.cpp
+c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine.cpp(127): warning C4018: '<': signed/unsigned mismatch
+  DbgaEngine.vcxproj -> C:\Users\dbga_55\Documents\Cpp\CppEngine\DbgaEngine\Debug\DbgaEngine.exe
