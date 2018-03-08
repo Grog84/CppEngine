@@ -1,3 +1,4 @@
 ﻿  DbgaEngine.cpp
-c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine.cpp(127): warning C4018: '<': signed/unsigned mismatch
-  DbgaEngine.vcxproj -> C:\Users\dbga_55\Documents\Cpp\CppEngine\DbgaEngine\Debug\DbgaEngine.exe
+c:\users\grolg\documents\cpp projects\dbgaengine\dbgaengine\dbgaengine\dbgaengine.cpp(127): warning C4018: '<': errata corrispondenza tra signed e unsigned
+c:\users\grolg\documents\cpp projects\dbgaengine\dbgaengine\dbgaengine\dbgaengine.cpp(198): warning C4244: 'inizializzazione': conversione da 'double' a 'float'. Possibile perdita di dati.
+  DbgaEngine.vcxproj -> C:\Users\grolg\Documents\Cpp Projects\DBGAEngine\DbgaEngine\Debug\DbgaEngine.exe
