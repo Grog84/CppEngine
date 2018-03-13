@@ -78,6 +78,10 @@ public:
 	void Print();
 	void SavePPM(std::ofstream & MyFile);
 
+
+	const Color & operator[](const std::pair<unsigned int, unsigned int> &) const; // deve prendere un solo dato
+	Color & operator[](const std::pair<unsigned int, unsigned int> &);
+
 private:
 	ImageInfo Info{ 0 , 0 };
 	std::vector<Color> Colors;
@@ -86,20 +90,35 @@ private:
 
 };
 
-Image::Image(const std::string & NewName, const ImageInfo & NewInfo) : Colors(Info.GetWidth() * Info.GetHeight())
+Image::Image(const std::string & NewName, const ImageInfo & NewInfo) : Colors(NewInfo.GetWidth() * NewInfo.GetHeight(), Color{})
 {
 	assert(Name.empty());
 
 	Name = NewName;
 	Info = NewInfo;
-	for (int i = 0; i < Info.GetWidth() * Info.GetHeight(); i++)
-	{
-		Colors.push_back(Color{ 0, 0, 0 });
-	}
+
 }
 
 Image::~Image()
 {
+}
+
+const Color & Image::operator[](const std::pair<unsigned int, unsigned int> & coord) const
+{
+	unsigned int arrayPosition = coord.second * Info.GetWidth() + coord.first;
+	assert(arrayPosition < Info.GetWidth()*Info.GetHeight());
+
+	return Colors[arrayPosition];
+	
+}
+
+Color & Image::operator[](const std::pair<unsigned int, unsigned int> & coord)
+{
+	unsigned int arrayPosition = coord.second * Info.GetWidth() + coord.first;
+	assert(arrayPosition < Info.GetWidth()*Info.GetHeight());
+
+	return Colors[arrayPosition];
+	
 }
 
 const ImageInfo & Image::GetInfo() const
@@ -188,7 +207,8 @@ int main()
 
 
 	Color Blue{ 0, 0, 255 };
-	MyImage.SetPixel(1, 5, Blue);
+	//MyImage.SetPixel(1, 5, Blue);
+	MyImage[{1, 5}] = Blue;
 
 	int gradVal = 0;
 	float dist = std::sqrt((Info.GetWidth() - 1)*(Info.GetWidth() - 1) + (Info.GetHeight() - 1)*(Info.GetHeight() - 1));
@@ -206,7 +226,8 @@ int main()
 		int val = (int)((std::sqrt(Xf*Xf + Yf * Yf) / dist)*255.0f);
 
 		Color pixCol = Color{ (uint8_t)val, (uint8_t)val, (uint8_t)val };
-		MyImage.SetPixel(X, Y, pixCol);
+		// MyImage.SetPixel(X, Y, pixCol);
+		MyImage[{X, Y}] = pixCol;
 	}
 
 	// MyImage.Print();

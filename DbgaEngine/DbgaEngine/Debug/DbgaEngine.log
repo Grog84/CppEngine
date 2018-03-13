@@ -1,4 +1,6 @@
 ﻿  DbgaEngine2.cpp
-c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine2.cpp(127): warning C4018: '<': signed/unsigned mismatch
-c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine2.cpp(194): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine2.cpp(109): warning C4018: '<': signed/unsigned mismatch
+c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine2.cpp(118): warning C4018: '<': signed/unsigned mismatch
+c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine2.cpp(146): warning C4018: '<': signed/unsigned mismatch
+c:\users\dbga_55\documents\cpp\cppengine\dbgaengine\dbgaengine\dbgaengine2.cpp(214): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   DbgaEngine.vcxproj -> C:\Users\dbga_55\Documents\Cpp\CppEngine\DbgaEngine\Debug\DbgaEngine.exe
